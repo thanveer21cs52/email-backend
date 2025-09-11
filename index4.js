@@ -262,8 +262,7 @@ app.get('/read-mails', async (req, res) => {
     }
 
     messages.sort((a, b) => new Date(b.received_at) - new Date(a.received_at));
-    const data = await client.query('SELECT * FROM unread_emails ORDER BY received_at DESC LIMIT 10
-');
+    const data = await client.query('SELECT * FROM unread_emails ORDER BY received_at DESC LIMIT 10');
     res.json({ messages: 'success', data });
   } catch (error) {
     console.error(error);
