@@ -15,7 +15,7 @@ const path = require('path');
 
 app.use(express.json());
 // "http://localhost:3000"||https://email-frontend-one.vercel.app"
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "https://vercel.com/dt-teams-projects/email-frontend" }));
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
